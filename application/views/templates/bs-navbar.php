@@ -11,7 +11,7 @@
       <li><a href="#">Hỗ trợ</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span><?php echo $test?></a></li>
+      <li id="dangnhap"><a href="dangnhap"><span class="glyphicon glyphicon-log-in"></span><?php echo $test?></a></li>
     </ul>
   </div>
   </nav>
