@@ -2,3 +2,48 @@
     margin:0;
     padding:0;
 }
+
+body
+{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.banner-stu img
+{
+    width: 1200px;
+}
+
+@media screen and (max-width:900px)
+{
+    body{
+        width: 100%;
+    }
+    .banner-stu img
+    {
+        width: 100%;
+    }
+}
+
+.navbar
+{
+    background:#eeeeee;
+}
+
+.navbar-inverse
+{
+    border: none;
+}
+
+.navbar-inverse .navbar-nav > li > a
+{
+    color: black;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover
+{
+    color: red;
+    text-decoration:underline;
+}
+
+

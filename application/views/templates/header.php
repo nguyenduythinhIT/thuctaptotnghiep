@@ -12,5 +12,9 @@
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
                 
                 <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/template.css">
+                <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/bs-navbar.css">
+                <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/login.css">
+                <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/thongtin.css">
+                <div class="banner-stu"><img src="<?=base_url()?>img/BANNER-STU.png"/></div>
         </head>
         <body>
