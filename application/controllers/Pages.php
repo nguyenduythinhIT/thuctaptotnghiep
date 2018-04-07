@@ -14,7 +14,7 @@ class Pages extends CI_Controller {
         $this->load->helper('url');
         $this->load->view('templates/header', $data);;
         $this->load->view('templates/bs-navbar', $data);
-        $this->load->view('pages/dangnhap', $data);
+        $this->load->view('templates/dangnhap', $data);
         $this->load->view('pages/'.$page, $data);
         $this->load->view('templates/footer', $data);
 
