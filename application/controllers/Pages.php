@@ -13,9 +13,10 @@ class Pages extends CI_Controller {
         $this->load->library('session');
         $this->load->helper('url');
         $this->load->view('templates/header', $data);;
+        $this->load->view('templates/bs-navbar', $data);
         $this->load->view('pages/'.$page, $data);
         $this->load->view('templates/footer', $data);
-        $this->load->view('templates/bs-navbar', $data);
+
     }
     
 }
