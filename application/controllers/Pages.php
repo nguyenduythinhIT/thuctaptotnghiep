@@ -1,5 +1,4 @@
 <?php
-$this->load->library('session');
 class Pages extends CI_Controller {
 
     public function views($page = "trangchu")
@@ -10,6 +9,7 @@ class Pages extends CI_Controller {
                 show_404();
         }
         $data['title'] = $page;
+        $this->load->library('session');
         $this->load->helper('url');
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navibar',$data);
