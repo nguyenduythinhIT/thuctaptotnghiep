@@ -1,15 +1,27 @@
 <style>
 .navbar-right{
-    margin:-10px;
+    margin-top:-10px;
 
 }
+#signin {
+    float:right;
+}
+#login p{
+    float:right;
+    color:red;
 }
 </style>
 <div id="login">
-<form id="signin" class="navbar-form navbar-right" role="form">
+<?php 
+if(!isset($_SESSION['id'])) $_SESSION['id']='';
+if(!isset($_SESSION['error'])) $_SESSION['error']='';
+if($_SESSION['id']=="")
+{
+?>
+<form id="signin" class="navbar-form navbar-right" role="form" method="post" action="dangnhap">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
+                            <input id="username" type="text" class="form-control" name="username" value="" placeholder="ID">                                        
                         </div>
 
                         <div class="input-group">
@@ -19,4 +31,16 @@
 
                         <button type="submit" class="btn btn-primary">Login</button>
                    </form>
+<?php
+}
+else{
+?>
+                   <p>
+                    <?php if(isset($_SESSION['id'])) echo "Xin chào :".$_SESSION['id'];?> 
+                    <a href="Form/logout"><button style="color:black">Đăng xuất</button></a>
+                   </p>
+                   
+<?php 
+}
+?>
 </div>

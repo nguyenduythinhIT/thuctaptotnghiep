@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'Pages/views';
 $route['(:any)'] = 'Pages/views/$1';
+$route['dangnhap'] = 'Form/login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

@@ -8,9 +8,9 @@ class Pages extends CI_Controller {
                 // Whoops, we don't have a page for that!
                 show_404();
         }
+        $this->session->set_userdata('pre_page', $page);
         $data['title'] = 'Cổng thông tin STU';
         $data['test'] = 'Đăng Nhập';
-        $this->load->library('session');
         $this->load->helper('url');
         $this->load->view('templates/header', $data);;
         $this->load->view('templates/bs-navbar', $data);
