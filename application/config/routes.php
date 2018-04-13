@@ -11,7 +11,8 @@ $route['backends/danhmuc/(:any)']='Backends/views/$1';
 $route['backends/(:any)/(:any)']='Backends/backview/$1/$2';
 $route['backends/phanquyen/add']='Phanquyen/add';
 $route['backends/phanquyen/delete/(:any)']='Phanquyen/delete/$1';
-$route['backends/phanquyen/add/(:any)']='Phanquyen/role_page_add';
+$route['backends/phanquyen_chitiet/add/(:any)']='Phanquyen/role_page_add/$1';
+$route['backends/phanquyen_chitiet/delete/(:any)']='Phanquyen/role_page_delete/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

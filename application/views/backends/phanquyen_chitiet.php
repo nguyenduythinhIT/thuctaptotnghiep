@@ -17,6 +17,10 @@ if($id==0)
 {
     echo "<p style='width:80%;margin:10px auto' class='text-danger'><b>Administrator không thể tùy chỉnh phân quyền</b></p>";
 }
+else if($id==1)
+{
+    echo "<p style='width:80%;margin:10px auto' class='text-danger'><b>Sinh viên     không thể tùy chỉnh phân quyền</b></p>";
+}
 else{
     ?>
         <table class='table' style='width:80%;margin:10px auto;'>
@@ -26,15 +30,16 @@ else{
             foreach($list_page as $k => $v)
             {
             ?>
-                <form method='post' action="<?php echo base_url();?>backends/phanquyen/<?php if(!$role_page->searchRolePages($id,$v['name'])) {echo 'add/$id';} else {echo 'delete/$id';} ?>">
+                <form method='post' action="<?php echo base_url();?>backends/phanquyen_chitiet/<?php if(!$role_page->searchRolePages($id,$v['name'])) {echo "add/$id";} else {echo "delete/$id";} ?>">
                 <table class='table' style='width:80%;margin:10px auto;'>
                 <tr>
                     <td style='width:30%'><input type='text' class='form-control' value=<?php echo $v['name']; ?> name='page_name' readonly></td>
                     <td style='width:40%'><?php echo $v['optional']; ?></td>
-                    <td style='width:30%'><input type="submit" class='<?php if(!$role_page->searchRolePages($id,$v['name'])) {echo 'btn btn-primary';} else {echo 'btn btn-danger';} ?>' value=<?php if(!$role_page->searchRolePages($id,$v['name'])) {echo 'Thêm Page';} else {echo 'Xóa Page';} ?>>
+                    <td style='width:30%'><input type="submit" class='<?php if(!$role_page->searchRolePages($id,$v['name'])) {echo 'btn btn-primary';} else {echo 'btn btn-danger';} ?>' value='<?php if(!$role_page->searchRolePages($id,$v['name'])) {echo 'Thêm Page';} else {echo 'Xóa Page';} ?>'>
                     </td>
                 </tr>
                 </table>
+                </form>
             <?php
             }
 }
