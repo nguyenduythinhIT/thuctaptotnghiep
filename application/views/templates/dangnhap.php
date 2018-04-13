@@ -58,4 +58,4 @@ else{
 ?>
 </div>
 <br style="clear:both">
-<div style="width:100%;border:1px solid #BBB;background:#EEE;border-radius:5px;">
+<div style="width:100%;border:1px solid #BBB;background:#EEE;border-radius:5px;min-height:300px;">

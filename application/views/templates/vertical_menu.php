@@ -12,6 +12,7 @@
     float:left;
 }
 .content_right{
+    min-height:300px;
     width:calc(100% - 210px);
     color:black;
     text-align:left;
