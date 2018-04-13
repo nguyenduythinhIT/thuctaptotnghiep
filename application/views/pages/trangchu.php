@@ -1,7 +1,7 @@
-<pre style="width:100%; margin:15px 0;">
-<?php
-    $this->load->model('Class_model');
-    $class= new Class_model;
-    $ds_class=$class->getall();
-    print_r($ds_class);
+<?php 
+$this->load->model("class_model");
+$class=new class_model();
+$class->showformclass(1);
+$student=new student_model();
+$student->showall($student->getall());
 ?>

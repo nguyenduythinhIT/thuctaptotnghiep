@@ -5,6 +5,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Pages/views';
 $route['(:any)'] = 'Pages/views/$1';
 $route['dangnhap'] = 'Form/login';
+$route['backends'] = 'Backends/views';
+$route['backends/(:any)'] = 'Backends/views/$1';
+$route['backends/danhmuc/(:any)']='Backends/views/$1';
+$route['backends/(:any)/(:any)']='Backends/backview/$1/$2';
+$route['backends/phanquyen/add']='Phanquyen/add';
+$route['backends/phanquyen/delete/(:any)']='Phanquyen/delete/$1';
+$route['backends/phanquyen/add/(:any)']='Phanquyen/role_page_add';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

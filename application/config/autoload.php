@@ -60,7 +60,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
 
-$autoload['libraries'] = array('session');
+$autoload['libraries'] = array('session','database');
 
 
 /*
@@ -88,7 +88,7 @@ $autoload['drivers'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array();
+$autoload['helper'] = array('url');
 
 
 /*
@@ -137,4 +137,21 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 
-$autoload['model'] = array();
+$autoload['model'] = array(
+    'class_model',
+    'comment_model',
+    'evaluation_criteria_model',
+    'evaluation_form_model',
+    'faculty_model',
+    'notification_model',
+    'notification_student_model',
+    'proof_model',
+    'role_model',
+    'semester_model',
+    'staff_model',
+    'student_model',
+    'topic_model',
+    'evaluation_result_model',
+    'page_model',
+    'role_page_model'
+);
