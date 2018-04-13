@@ -26,7 +26,7 @@ else{
             foreach($list_page as $k => $v)
             {
             ?>
-                <form method='post' action="<?php echo base_url();?>backends/phanquyen/<?php if(!$role_page->searchRolePages($id,$v['name'])) {echo 'add/$id';} else {echo 'delete/$id';} ?>">
+                <form method='post' action="<?php echo base_url();?>backends/phanquyen/<?php if(!$role_page->searchRolePages($id,$v['name'])) {echo 'add/'.$id;} else {echo 'delete/$id';} ?>">
                 <table class='table' style='width:80%;margin:10px auto;'>
                 <tr>
                     <td style='width:30%'><input type='text' class='form-control' value=<?php echo $v['name']; ?> name='page_name' readonly></td>
