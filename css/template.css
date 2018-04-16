@@ -46,4 +46,87 @@ body
     text-decoration:underline;
 }
 
+#noti-box
+{
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.noti-box-item
+{
+background-color: #f1f1f1;
+  width: 350px;
+  height: 250px;
+  margin: 10px;
+  text-align: center;
+}
+
+.p-noti-title
+{
+    font-size: 15px;
+    background-color: #a09bdb9d;
+    color: white;
+    margin-top:150px;
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    text-align:left;
+    font-weight:bold;
+}
+.p-noti-content
+{
+    font-size: 13px;
+    color: white;
+    margin-left:10px;
+    margin-top:210px;
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    text-align:left;
+    font-weight:lighter;
+}
+.p-noti-create-by
+{
+    font-size: 13px;
+    color: white;
+    margin-top:170px;
+    margin-left:10px;
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    text-align:left;
+    font-weight:lighter;
+}
+.p-noti-update-at
+{
+    font-size: 13px;
+    color: white;
+    margin-top:190px;
+    margin-left:10px;
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    text-align:left;
+    font-weight:lighter;
+}
+.p-noti-more
+{
+    font-size: 15px;
+    margin-top:210px;
+    margin-left:240px;
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    text-align:left;
+    font-weight:lighter;
+}
+.p-noti-more a:hover
+{
+    text-decoration: none;
+    color: navy;
+}
+
+.noti-box-item-img
+{
+    position: absolute;
+}

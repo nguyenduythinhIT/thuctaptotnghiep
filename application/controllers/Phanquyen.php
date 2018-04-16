@@ -3,7 +3,6 @@ class Phanquyen extends CI_Controller {
 
     public function add()
         {
-            if($_SESSION['role']!=0) show_404();
             if(isset($_POST['name']))
             {
                 $name=$_POST['name'];
@@ -33,7 +32,6 @@ class Phanquyen extends CI_Controller {
         }
     public function delete($id)
         {
-            if($_SESSION['role']!=0) show_404();
             $role=new role_model();
             if($role->delete($id))
             {
@@ -45,25 +43,9 @@ class Phanquyen extends CI_Controller {
                 echo "<a href='".base_url()."backends/".$_SESSION['pre_page']."'><button>Quay về</button></a>";
             }
         }
-    public function role_page_add($id)
+    public function role_page_add()
         {
-            if($_SESSION['role']!=0) show_404();
-                if(isset($_POST['page_name']))
-                {
-                    $role_page=new role_page_model();
-                    $role_page->insert($id,$_POST['page_name']);
-                }
-                redirect(base_url(""."backends/".$_SESSION['pre_page']),'location');    
+            echo "r p a";
         }
-    public function role_page_delete($id)
-        {
-            if($_SESSION['role']!=0) show_404();
-            if(isset($_POST['page_name']))
-                {
-                    $role_page=new role_page_model();
-                    $role_page->delete($id,$_POST['page_name']);
-                }
-                redirect(base_url(""."backends/".$_SESSION['pre_page']),'location'); 
-        }   
 }
 ?>

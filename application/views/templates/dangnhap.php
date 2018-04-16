@@ -46,7 +46,7 @@ else{
     <?php
 
         $role_page=new role_page_model();
-        if($_SESSION['role']==0 || $role_page->searchRolePages($_SESSION['role'],"trangchu"))
+        if($_SESSION['role']==0 || $role_page->searchRolePages($_SESSION['role'],"backends"))
         {
             ?><a href="<?php echo base_url()?>backends"><button class='btn btn-danger' style="color:black">Trang quản lí </button></a><?php
         } 
