@@ -2,8 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-$route['default_controller'] = 'Pages/views';
-$route['(:any)'] = 'Pages/views/$1';
+$route['default_controller'] = 'Routing/views';
+$route['(:any)'] = 'Routing/views/$1';
 $route['dangnhap'] = 'Form/login';
 $route['backends'] = 'Backends/views';
 $route['backends/(:any)'] = 'Backends/views/$1';
@@ -11,7 +11,13 @@ $route['backends/danhmuc/(:any)']='Backends/views/$1';
 $route['backends/(:any)/(:any)']='Backends/backview/$1/$2';
 $route['backends/phanquyen/add']='Phanquyen/add';
 $route['backends/phanquyen/delete/(:any)']='Phanquyen/delete/$1';
+<<<<<<< HEAD
 $route['backends/phanquyen/add/(:any)']='Phanquyen/role_page_add';
+=======
+$route['backends/phanquyen_chitiet/add/(:any)']='Phanquyen/role_page_add/$1';
+$route['backends/phanquyen_chitiet/delete/(:any)']='Phanquyen/role_page_delete/$1';
+$route['backends/pages/update']='Pages/update';
+>>>>>>> 4bdd56e52e4cc84236b71536738053c8953cb6a1
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

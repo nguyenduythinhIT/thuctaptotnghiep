@@ -10,7 +10,7 @@ class Class_model extends CI_Model {
         $this->$faculty_id=$faculty_id;
         $this->$education_adviser_id=$education_adviser_id;
     }
-    public function showformclasslist()
+    public function showall()
     {
         $this->load->database('default');
         $sql="SELECT classes.id,classes.name AS `class_name`,faculties.name AS `faculty_name`,staff.name AS `staff_name` 
@@ -19,10 +19,8 @@ class Class_model extends CI_Model {
         LEFt JOIN faculties ON faculties.id=classes.faculty_id";
         $query= $this->db->query($sql);
         $class= $query->result_array();
-        print_r($class);
-        echo "<table class='table'>";
-        echo "<thread>";
-        echo "<tr><th scope='col'>Lớp</th><th scope='col'>Khoa</th><th scope='col'>Cố vấn học tập</th><th>Thao tác</th></tr>";
+        echo "<table class='table' style='width:80%;margin:10px auto;'>";
+        echo "<tr><th>Lớp</th><th>Khoa</th><th>Cố vấn học tập</th><th>Thao tác</th></tr>";
         foreach($class as $key => $value)
         {
             echo "<tr>";
@@ -32,9 +30,10 @@ class Class_model extends CI_Model {
         }
         echo "</table>";
     }
-    public function showformclass($id)
+    public function showclass($id)
     {
-        $this->load->database('default');
+
+        $role_page=new role_page_model();
         $sql1="SELECT classes.id,classes.name AS `class_name`,classes.faculty_id,faculties.name AS `faculty_name`,classes.education_adviser_id,staff.name AS `staff_name`, classes.created_at,classes.updated_at 
         FROM classes
         LEFT JOIN staff ON staff.id=classes.education_adviser_id
@@ -59,10 +58,10 @@ class Class_model extends CI_Model {
                 $value=$class[0];
                 ?>
 
-                <form style="width:80%;margin:10px auto;" action="<?php echo base_url();?>backends/class/update" method="post">
+                <form style="width:80%;margin:10px auto;" action="<?php echo base_url();?>backends/class/update" method="post" >
                 <table class="table">
                     <tr><th colspan=2><h2 style='margin:10px auto;width:100%;color:rgb(52,72,182)'>Thông tin lớp <?php echo $value['class_name']; ?></h2></th></tr>
-                    <tr><td>Tên lớp: </td><td><input type="text" class="form-control" id="class_name" value="<?php echo $value["class_name"];?>"></td></tr>
+                    <tr><td>Tên lớp: </td><td><input type="text" class="form-control" id="class_name" value="<?php echo $value["class_name"];?>" ></td></tr>
                     <tr><td>Khoa: </td><td>
                     <select class="custom-select" name="faculty_id">
                     <?php

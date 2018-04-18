@@ -12,7 +12,7 @@ $list_page=$page->getall();
     {
      ?>
 
-        <?php if($_SESSION['role']==0) {?><form class='form-group'> <?php } ?>
+        <?php if($_SESSION['role']==0) {?><form class='form-group' action="<?php echo base_url();?>backends/pages/update"  method="post"> <?php } ?>
         <table class='table'>
         <tr>
             <td style='width:300px'><input type='text' class='form-control' name='name' value='<?php echo $v['name'];?>' readonly></td>
