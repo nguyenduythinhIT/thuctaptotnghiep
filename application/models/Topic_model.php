@@ -6,6 +6,16 @@ class Topic_model extends CI_Model {
         $query = $this->db->get('topics');
         return $query->result_array();
     }
+    public function parentMaxscore()
+    {
+        $query = $this->db->query("SELECT id,max_score FROM `topics`");
+        $ds=array();
+        foreach($query->result_array() as $k=>$v)
+        {
+            $ds[$v['id']]=array('max_score' => $v['max_score'],'score' => 0);
+        } 
+        return $ds;
+    }
     public function count()
     {
         $query = $this->db->query("SELECT COUNT(`id`) AS amount FROM `topics`");

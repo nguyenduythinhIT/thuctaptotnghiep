@@ -14,6 +14,7 @@
 
 <div id="login">
 <?php 
+if(!isset($_SESSION['pre_page'])) $_SESSION['pre_page']="trangchu";
 if(!isset($_SESSION['id'])) $_SESSION['id']="";
 if(!isset($_SESSION['error'])) $_SESSION['error']='';
 if(!isset($_SESSION['role'])) $_SESSION['role']='-1';

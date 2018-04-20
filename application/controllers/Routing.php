@@ -1,6 +1,5 @@
 <?php
 class Routing extends CI_Controller {
-
     public function views($page = "trangchu")
     {
         if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
@@ -8,7 +7,6 @@ class Routing extends CI_Controller {
                 // Whoops, we don't have a page for that!
                 show_404();
         }
-        if(!isset($_SESSION['pre_page'])) $this->session->set_userdata('pre_page', '');
         if($_SESSION['pre_page'] != 'login' )
         {
             $this->session->set_userdata('error', '');

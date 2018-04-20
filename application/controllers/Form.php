@@ -24,9 +24,7 @@ class Form extends CI_Controller {
             {
                 $this->session->set_userdata('error','Lỗi đăng nhập');
             }
-            
         }
-            
         $page=$_SESSION['pre_page'];
         $this->session->set_userdata('pre_page', 'login');
         $this->load->helper('URL');

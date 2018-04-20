@@ -1,6 +1,5 @@
 <?php
 class Backends extends CI_Controller {
-
     public function views($page= "trangchu")
         {
             if ( ! file_exists(APPPATH.'views/backends/'.$page.'.php'))
@@ -8,7 +7,6 @@ class Backends extends CI_Controller {
                     // Whoops, we don't have a page for that!
                     show_404();
             }
-
             $role_page=new role_page_model();
             if($_SESSION['role']==0 || $role_page->searchRolePages($_SESSION['role'],$page))
             {
@@ -17,7 +15,6 @@ class Backends extends CI_Controller {
                     $this->session->set_userdata('error', '');
                 }
                 $this->session->set_userdata('pre_page', $page);
-
                 $data['pagename']='';
                 if($page=='trangchu') $data['pagename']="Trang chủ";
                 else if($page=='bangdanhgia') $data['pagename']="Quản lí bảng đánh giá rèn luyện";
@@ -29,7 +26,6 @@ class Backends extends CI_Controller {
                 else if($page=='phanquyen') $data['pagename']="Phân quyền";
                 else if($page=='pages') $data['pagename']="Các trang website";
                 $data['title'] = 'Cổng thông tin STU';  
-
                 $this->load->helper('url');
                 $this->load->view('templates/header', $data);;
                 $this->load->view('templates/bs-navbar', $data);

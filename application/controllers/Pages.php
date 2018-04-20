@@ -12,6 +12,5 @@ class Pages extends CI_Controller {
         }
         redirect(base_url(""."backends/".$_SESSION['pre_page']),'location');
     }
-
 }
 ?>

@@ -28,7 +28,6 @@ class Notification_model extends CI_Model {
         $sql = "SELECT * from notifications";
         $query = $this->db->query($sql);
         $noti = $query->result_array();
-        print_r($noti);
         echo "<div id='noti-box'>";
         foreach($noti as $key => $value)
         {

@@ -36,6 +36,6 @@ class Evaluation_criteria_model extends CI_Model {
         $query = $this->db->query("SELECT * FROM evaluation_criterias WHERE parent_id=?",array($id));
         return $query->result_array();
     }
-    
+
 }
 ?>

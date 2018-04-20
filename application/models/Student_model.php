@@ -33,6 +33,11 @@ class Student_model extends CI_Model {
         $query = $this->db->query($sql,$arr);
         return $query->result_array();
     }
+    public function searchbyClass($id)
+    {
+        $query = $this->db->query("SELECT * FROM students WHERE class_id=?",array($id));
+        return $query->result_array();
+    }
     public function showall($list)
     {
         echo "<table class='table' style='width:80%;margin:10px auto'>";

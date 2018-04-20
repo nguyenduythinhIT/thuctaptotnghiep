@@ -7,7 +7,7 @@ if($_SESSION['id']=="")
     <?php 
 }
 else{
-    if($_SESSION['role']==1)
+    if($_SESSION['role']==1 || $_SESSION['role']==2)
     {
         $student=new student_model();
         $student->show($_SESSION['id']);
