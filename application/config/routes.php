@@ -1,15 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
+
 $route['default_controller'] = 'Routing/views';
 $route['(:any)'] = 'Routing/views/$1';
 $route['dangnhap'] = 'Form/login';
+$route['ketqua/add'] = 'Ketqua/add';
 $route['backends'] = 'Backends/views';
 $route['backends/(:any)'] = 'Backends/views/$1';
 $route['backends/danhmuc/(:any)']='Backends/views/$1';
 $route['backends/(:any)/(:any)']='Backends/backview/$1/$2';
 $route['backends/phanquyen/add']='Phanquyen/add';
 $route['backends/phanquyen/delete/(:any)']='Phanquyen/delete/$1';
-$route['backends/phanquyen/add/(:any)']='Phanquyen/role_page_add';
 $route['backends/phanquyen_chitiet/add/(:any)']='Phanquyen/role_page_add/$1';
 $route['backends/phanquyen_chitiet/delete/(:any)']='Phanquyen/role_page_delete/$1';
 $route['backends/pages/update']='Pages/update';

@@ -26,15 +26,7 @@ else{
             foreach($list_page as $k => $v)
             {
             ?>
-<<<<<<< HEAD
-                <form method='post' action="<?php echo base_url();?>backends/phanquyen/<?php if(!$role_page->searchRolePages($id,$v['name'])) {echo 'add/$id';} else {echo 'delete/$id';} ?>">
-=======
-<<<<<<< HEAD
-                <form method='post' action="<?php echo base_url();?>backends/phanquyen/<?php if(!$role_page->searchRolePages($id,$v['name'])) {echo 'add/'.$id;} else {echo 'delete/$id';} ?>">
-=======
                 <form method='post' action="<?php echo base_url();?>backends/phanquyen_chitiet/<?php if(!$role_page->searchRolePages($id,$v['name'])) {echo "add/$id";} else {echo "delete/$id";} ?>">
->>>>>>> 2aad9898afaa699650cb4d61423b746b66d36839
->>>>>>> 4bdd56e52e4cc84236b71536738053c8953cb6a1
                 <table class='table' style='width:80%;margin:10px auto;'>
                 <tr>
                     <td style='width:30%'><input type='text' class='form-control' value=<?php echo $v['name']; ?> name='page_name' readonly></td>
@@ -43,6 +35,7 @@ else{
                     </td>
                 </tr>
                 </table>
+                </form>
             <?php
             }
 }
